@@ -3,6 +3,7 @@ package com.hanvon.kg.controller;
 import com.hanvon.kg.domain.Product;
 import com.hanvon.kg.repository.ProductRepository;
 import com.hanvon.kg.sevices.ProductService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,16 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by MJF on 17:41 2017/8/31
  */
+@Slf4j
 @RestController
 public class ProductController {
-
     @Autowired
     private ProductRepository productRepository;
-
     @Autowired
     private ProductService productService;
 
-
+    
     /**
      * Created by MJF on 17:44 2017/8/31
      *
@@ -41,6 +41,17 @@ public class ProductController {
     @GetMapping(value = "/keep")
     public Product keep(){
        return productService.keepProduct();
+    }
+
+    /**
+     * Created by MJF on 10:55 2017/9/1
+     *
+     * @Description:通过输入查询条件查询所有符合条件的设备
+     */
+
+    @GetMapping(value = "/find")
+    public void proByType(Product product){
+
     }
 
 

@@ -43,17 +43,4 @@ public class Product {
     //热交换:on/off
     private boolean hotSwap;
 
-    public Product(Equipment equipment, String serial, String name, boolean status, String startTiming, String endTiming, Strainer strainer, Wind windSpeed, boolean gears, boolean circulation, boolean hotSwap) {
-        this.equipment = equipment;
-        this.serial = serial;
-        this.name = name;
-        this.status = status;
-        this.startTiming = startTiming;
-        this.endTiming = endTiming;
-        this.strainer = strainer;
-        this.windSpeed = windSpeed;
-        this.gears = gears;
-        this.circulation = circulation;
-        this.hotSwap = hotSwap;
-    }
 }
