@@ -14,11 +14,11 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Strainer {
-    @Field
-    private int num1;
-    @Field
-    private int num2;
-    @Field
-    private int num3;
+    @Field("num1")
+    private Integer num1;
+    @Field("num2")
+    private Integer num2;
+    @Field("num3")
+    private Integer num3;
 
 }
